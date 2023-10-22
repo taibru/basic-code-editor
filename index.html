@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Code Editor</title>
+    <script src="script/features.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading" id="title">
+        </h1>
+      
+    </header>
+    <div class="editor">
+      <div class="left-side">
+        <div>
+          <div class="functional-section">
+            <div class="html-btn">
+              <img width="30px" src="icons/html-icon.svg" alt="">
+              <h2 class="area-title">html</h2>
+            </div> 
+            <div class="btn">
+              <div class="buttons">
+                <img width="20px" src="icons/run-icon.svg" alt="">
+                <button onclick="runCode()">Run</button>
+              </div>
+              <div class="buttons">
+                <img width="20px" src="icons/arrow-previous-saved-icon.svg" alt="">
+                <button onclick="previouslySavedCode()">Previous code</button>
+              </div>
+              
+              <div class="buttons">
+                <img width="20px" src="icons/copy-icon.svg" alt="">
+                <button onclick="copyCode()">Copy code</button>
+              </div>
+              
+              <div class="buttons">
+                <img width="20px" src="icons/save-icon.svg" alt="">
+                <button onclick="saveCode()">Save code</button>
+              </div>
+              <div class="buttons">
+                <img id="locked-img" width="20px" src="icons/lock-icon.svg" alt="">
+                <button onclick="toggleLock()">Lock/Unlock</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="area-field">
+            <div style="position: relative; width: 100%;">
+              <textarea onkeyup="runCode();" spellcheck="false" class="codeArea" id="html-code" placeholder="Write your html code here"></textarea>
+            </div>
+          </div>
+          
+          <div class="functional-section">
+            <img width="30px" src="icons/css-icon.svg" alt="">
+            <h2 class="area-title">css</h2>
+          </div>
+          <div class="area-field">
+            <textarea onkeyup="runCode();" spellcheck="false" class="codeArea" id="css-code" placeholder="Write your css code here"></textarea>
+          </div>
+          <div class="functional-section">
+            <img width="30px" src="icons/js-icon.svg" alt="">
+            <h2 class="area-title">javascript</h2>
+          </div>
+          <div class="area-field">
+            <textarea onkeyup="runCode();" spellcheck="false" class="codeArea" id="js-code" placeholder="Write your javascript code here"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+
+        <div class="output-heading">
+          <img width="20px" src="icons/output-icon.svg" alt="">
+          <h2 style="margin: 0; text-transform: uppercase; margin-left: 10px;">output</h2>
+        </div>
+        
+        <iframe class="output-area" width="100%" height="790px"  id="output"></iframe>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="inner-footer">
+        <span>&#169; created by</span>
+        <span id="name"></span>
+         
+      </div>
+    </div>
+
+    <script src="script/additional.js"></script>
+  </body>
+</html>
